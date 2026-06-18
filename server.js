@@ -5,7 +5,7 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const path = require('path');
 const app = express();
-app.use(express.static(path.join(__dirname, 'static')));
+app.use(express.static(__dirname));
 const PORT = process.env.PORT || 3000;
 const SECRET_KEY = 'my_super_secret_event_key'; // Keep this safe!
 
